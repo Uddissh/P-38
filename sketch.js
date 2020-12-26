@@ -107,3 +107,14 @@ function spawnObstacles() {
         obstacleGroup.add(obstacle);
   }
 }
+
+function touch(rex,obs) {
+	rex.x = trex.position.x;
+	obs.x = obstacleGroup.position.x;
+
+	if (rex.x > obs.x) {
+		trex.changeAnimation("collided", trex_collided)
+		obstacleGroup.destroy();
+	}
+
+}
