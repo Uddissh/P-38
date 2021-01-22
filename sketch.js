@@ -46,9 +46,9 @@ function setup() {
   gameOver.addImage(gameOverImg);
   gameOver.visible = false;
   gameOver.scale = 0.5;
-  reStart = createSprite(-10, 150);
+  reStart = createSprite(0, 150);
   reStart.addImage(reStartImg);
-  reStart.scale = 0;
+  reStart.scale = 1;
   reStart.visible = false;
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
@@ -119,7 +119,7 @@ function reset(){
   gameState = PLAY;
   
   gameOver.visible = false;
-  restart.visible = false;
+  reStart.visible = false;
   
   obstaclesGroup.destroyEach();
   cloudsGroup.destroyEach();
